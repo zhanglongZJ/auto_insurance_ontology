@@ -1,4 +1,4 @@
-# auto_insurance_ontology
+Auto Insurance Ontology
 
 The auto insurance ontology from real-world relational databases of auto insurance, and publish it on the Web to facilitate knowledge reuse and relevant research in the field of auto insurance.
 
