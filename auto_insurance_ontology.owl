@@ -1,0 +1,673 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://openkg/auto_insurance#"
+     xml:base="http://openkg/auto_insurance"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:auto_insurance="http://openkg/auto_insurance#">
+    <owl:Ontology rdf:about="http://openkg/auto_insurance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://openkg/auto_insurance#Assess -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Assess">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Contain -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Contain">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Drive -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Drive">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Auto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Hold -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Hold">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://openkg/Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Inspect -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Inspect">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Own -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Own">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Auto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Relate -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Relate">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://openkg/Policy"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Component"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Repaire -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Repaire">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Institution"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Auto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Report -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Report">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Sale -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#Sale">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Institution"/>
+        <rdfs:range rdf:resource="http://openkg/Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#SuspectGang -->
+
+    <owl:ObjectProperty rdf:about="http://openkg/auto_insurance#SuspectGang">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://openkg/auto_insurance#Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://openkg/auto_insurance#AccidentAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#AccidentAddress">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#AccidentAdress -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#AccidentAdress">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#AccidentDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#AccidentDescription">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#AccidentReason -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#AccidentReason">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#AccidentTime -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#AccidentTime">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#AddrLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#AddrLatitude">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#AddrLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#AddrLongitude">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Address -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Address">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Age -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Age">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#AutoBrand -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#AutoBrand">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#AutoCategory -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#AutoCategory">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#BeginDate -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#BeginDate">
+        <rdfs:domain rdf:resource="http://openkg/Policy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#CarAgeInMonth -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#CarAgeInMonth">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#CaseNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#CaseNumber">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#CaseProcessType -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#CaseProcessType">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#CaseStage -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#CaseStage">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#CaseType -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#CaseType">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#City -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#City">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#CompensationType -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#CompensationType">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Count -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Count">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Country -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Country">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#EndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#EndDate">
+        <rdfs:domain rdf:resource="http://openkg/Policy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#EngineNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#EngineNumber">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Gender -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Gender">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#InspectDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#InspectDescription">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#InstitutionID -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#InstitutionID">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Institution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#InstitutionName -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#InstitutionName">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Institution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#InstitutionType -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#InstitutionType">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Institution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#IsInspectOnSite -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#IsInspectOnSite">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#IsObjectDamage -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#IsObjectDamage">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#IsOnsiteReport -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#IsOnsiteReport">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#IsPeopleInjured -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#IsPeopleInjured">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#IsTarget -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#IsTarget">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Latitude">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Institution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#LicencyType -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#LicencyType">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#License -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#License">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Longitude">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Institution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#NewAutoPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#NewAutoPrice">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#OEM -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#OEM">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#PartName -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#PartName">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#PersonID -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#PersonID">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#PersonName -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#PersonName">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#PhoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#PhoneNumber">
+        <rdfs:domain rdf:resource="http://openkg/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#PlateNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#PlateNumber">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#PolicyNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#PolicyNumber">
+        <rdfs:domain rdf:resource="http://openkg/Policy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#PolicyType -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#PolicyType">
+        <rdfs:domain rdf:resource="http://openkg/Policy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Premium -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Premium">
+        <rdfs:domain rdf:resource="http://openkg/Policy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Price -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Price">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Province -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Province">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#Responsibility -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#Responsibility">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#RoadType -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#RoadType">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#TimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#TimeStamp">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#TotalPremium -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#TotalPremium">
+        <rdfs:domain rdf:resource="http://openkg/Policy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openkg/auto_insurance#VIN -->
+
+    <owl:DatatypeProperty rdf:about="http://openkg/auto_insurance#VIN">
+        <rdfs:domain rdf:resource="http://openkg/auto_insurance#Auto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://openkg/Person -->
+
+    <owl:Class rdf:about="http://openkg/Person"/>
+    
+
+
+    <!-- http://openkg/Policy -->
+
+    <owl:Class rdf:about="http://openkg/Policy"/>
+    
+
+
+    <!-- http://openkg/auto_insurance#Auto -->
+
+    <owl:Class rdf:about="http://openkg/auto_insurance#Auto"/>
+    
+
+
+    <!-- http://openkg/auto_insurance#Case -->
+
+    <owl:Class rdf:about="http://openkg/auto_insurance#Case"/>
+    
+
+
+    <!-- http://openkg/auto_insurance#Component -->
+
+    <owl:Class rdf:about="http://openkg/auto_insurance#Component"/>
+    
+
+
+    <!-- http://openkg/auto_insurance#Institution -->
+
+    <owl:Class rdf:about="http://openkg/auto_insurance#Institution"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
